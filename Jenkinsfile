@@ -1,5 +1,7 @@
 pipeline {
     agent any
+    parameters { 
+       choice(name: 'CHOICES', choices: ['DEV', 'UAT', 'PROD'], description: '') }
 
     stages {
         stage ('Compile Stage') {
