@@ -1,10 +1,10 @@
 pipeline {  
     agent any  
     stages {  
-            stage ('Git-Checkout') {  
+            stage ('Clone') {  
                 steps{
-                    git credentialsId: 'e6757c46-0750-4ab1-8cd4-c569efcbbdb1', url: 'https://github.com/sumyak/CI-CD-Pipeline.git'
-                    echo "Checkout successful";
+                    git credentialsId: 'e6757c46-0750-4ab1-8cd4-c569efcbbdb1', git branch: 'master', url: 'https://github.com/sumyak/CI-CD-Pipeline.git'
+                    echo "Clone successful";
                 } 
             }
             stage ('Build') {  
