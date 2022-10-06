@@ -11,7 +11,7 @@ pipeline {
                   steps{
                     withMaven(maven : '3.0.5') {
                     sh 'mvn clean compile'
-                    echo "test successful";
+                    echo "Maven build successful";
                   }  
                 } 
             }
